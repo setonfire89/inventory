@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'WalletApr2021',
+    title: 'Landing',
     htmlAttrs: {
       lang: 'en'
     },
@@ -12,6 +12,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      // <script src="https://kit.fontawesome.com/eca344a117.js" crossorigin="anonymous"></script>
+      {crossorigin: 'anonymous', type: 'text/javascript', src: "https://kit.fontawesome.com/eca344a117.js"}
     ]
   },
 
@@ -39,7 +43,9 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: process.env.BASE_URL || 'http://localhost:5000'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
